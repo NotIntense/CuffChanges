@@ -1,4 +1,4 @@
-﻿namespace CuffChanges
+﻿namespace EscapeChanges
 {
     using Exiled.API.Interfaces;
     using PlayerRoles;

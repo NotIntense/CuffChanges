@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CuffChanges", "CuffChanges.csproj", "{4FA1FEC4-F9CF-4B33-BB72-574A188CC04D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EscapeChanges", "EscapeChanges.csproj", "{4FA1FEC4-F9CF-4B33-BB72-574A188CC04D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{309125E7-144E-4865-AD5A-D2F37BE221FE}"
 	ProjectSection(SolutionItems) = preProject

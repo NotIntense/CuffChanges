@@ -1,4 +1,4 @@
-﻿namespace CuffChanges
+﻿namespace EscapeChanges
 {
     using Exiled.API.Extensions;
     using Exiled.API.Features;
@@ -7,7 +7,7 @@
 
     public static class EscapeHandler
     {
-        public static Config? Config = null;
+        public static Config? Config => Plugin.Instance.Config;
 
         public static void Escape(EscapingEventArgs ev)
         {

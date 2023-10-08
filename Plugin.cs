@@ -1,4 +1,4 @@
-﻿namespace CuffChanges
+﻿namespace EscapeChanges
 {
     using Exiled.API.Features;
     using System;
@@ -6,15 +6,16 @@
 
     public class Plugin : Plugin<Config>
     {
-        public override string Name { get; } = "CuffChanges";
+        public static Plugin? Instance { get; private set; } = null;
+        public override string Name { get; } = "EscapeChanges";
         public override string Author { get; } = "NotIntense";
-        public override string Prefix { get; } = "CF";
+        public override string Prefix { get; } = "EC";
         public override Version Version { get; } = new(1, 0, 0);
         public override Version RequiredExiledVersion { get; } = new(8, 2, 0);
 
         public override void OnEnabled()
-        {         
-            EscapeHandler.Config = Config;
+        {
+            Instance = this;
             PlayerHandler.Escaping += EscapeHandler.Escape;
             base.OnEnabled();
         }
@@ -22,7 +23,7 @@
         public override void OnDisabled()
         {
             PlayerHandler.Escaping -= EscapeHandler.Escape;
-            EscapeHandler.Config = null;
+            Instance = null;
             base.OnDisabled();
         }
     }
