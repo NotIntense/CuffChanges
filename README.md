@@ -19,8 +19,8 @@ Gives server owners more customizabilty with player escapes. Allows adding roles
 ## Misc.
 
 Default config : 
-`CF:
-# Gets or sets if the plugin is enabled.
+``CF:
+  # Gets or sets if the plugin is enabled.
   is_enabled: true
   # Gets or sets if the plugin's debug logs are enabled.
   debug: false
@@ -31,4 +31,4 @@ Default config :
     FacilityGuard:
       target_role: NtfPrivate
       need_to_be_cuffed: false
-      message: 'You''ve escaped and became a {newRole}!'`
+      message: 'You''ve escaped and became a {newRole}!'``
