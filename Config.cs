@@ -1,5 +1,6 @@
 ﻿namespace EscapeChanges
 {
+    using EscapeChanges.Handlers;
     using Exiled.API.Interfaces;
     using PlayerRoles;
     using System.ComponentModel;

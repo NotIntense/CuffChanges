@@ -1,5 +1,6 @@
-﻿namespace EscapeChanges
+﻿namespace EscapeChanges.Handlers
 {
+    using EscapeChanges;
     using Exiled.API.Extensions;
     using Exiled.API.Features;
     using Exiled.Events.EventArgs.Player;
@@ -29,17 +30,10 @@
             }
         }
 
-        public static void DisplayEscapeMessage(Player player, string message, RoleTypeId newRole) 
+        public static void DisplayEscapeMessage(Player player, string message, RoleTypeId newRole)
         {
             string edit = message.Replace("{newRole}", $"<color={newRole.GetColor().ToHex()}>{newRole.GetFullName()}</color>");
             player.Broadcast(new Broadcast(edit, 5), true);
         }
-    }
-
-    public class RoleConversionInfo
-    {
-        public RoleTypeId TargetRole { get; set; }
-        public bool NeedToBeCuffed { get; set; } = false;
-        public string? Message { get; set; } = string.Empty;
     }
 }

@@ -1,5 +1,6 @@
 ﻿namespace EscapeChanges
 {
+    using EscapeChanges.Handlers;
     using Exiled.API.Features;
     using System;
     using PlayerHandler = Exiled.Events.Handlers.Player;
