@@ -31,4 +31,4 @@ Default config :
     FacilityGuard:
       target_role: NtfPrivate
       need_to_be_cuffed: false
-      message: 'You''ve escaped and became a {newRole}!'```
+      message: 'You''ve escaped and became a {newRole}!'
