@@ -1,3 +1,5 @@
+![Total Downloads](https://img.shields.io/github/downloads/NotIntense/CuffChanges/total) Supported Version : https://img.shields.io/badge/EXILED_-8.2.1-blue
+
 # CuffChanged
 
 ## Description
