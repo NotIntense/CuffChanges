@@ -12,7 +12,7 @@ Gives server owners more customizabilty with player escapes. Allows adding roles
 
 ## Installation
 
-1. Download the latest release from the [Releases]([https://github.com/NotIntense/CuffChanges/releases](https://github.com/NotIntense/CuffChanges/releases)) page.
+1. Download the latest release from the [https://github.com/NotIntense/CuffChanges/releases](https://github.com/NotIntense/CuffChanges/releases) page.
 2. Place the `CuffChanges.dll` file into the `Exiled/Plugins` folder in your Exiled server directory.
 3. Configure the plugin by editing the `config.yml` file located in the `Exiled/Configs` folder.
 
