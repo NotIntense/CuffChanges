@@ -11,7 +11,7 @@
         public override string Name { get; } = "EscapeChanges";
         public override string Author { get; } = "NotIntense";
         public override string Prefix { get; } = "EC";
-        public override Version Version { get; } = new(1, 0, 0);
+        public override Version Version { get; } = new(1, 1, 0);
         public override Version RequiredExiledVersion { get; } = new(8, 2, 0);
 
         public override void OnEnabled()
