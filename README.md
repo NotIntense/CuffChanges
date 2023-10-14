@@ -1,5 +1,5 @@
 
-![Total Downloads](https://img.shields.io/github/downloads/NotIntense/CuffChanges/total)  Supported EXILED Version : ![SV](https://img.shields.io/badge/EXILED_-8.2.1-blue)
+![Total Downloads](https://img.shields.io/github/downloads/NotIntense/CuffChanges/total)  Supported Nebuli Version : ![SV](https://img.shields.io/badge/Nebuli_-1.2.6alpha-blue)
 
 # EscapeChanges
 

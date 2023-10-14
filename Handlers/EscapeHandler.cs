@@ -1,27 +1,27 @@
 ﻿namespace EscapeChanges.Handlers
 {
     using EscapeChanges;
-    using Exiled.API.Extensions;
-    using Exiled.API.Features;
-    using Exiled.Events.EventArgs.Player;
+    using Nebuli.API.Features.Player;
+    using Nebuli.Events.EventArguments.Player;
+    using Nebuli.API.Extensions;
     using PlayerRoles;
 
     public static class EscapeHandler
     {
         public static Config? Config => Plugin.Instance.Config;
 
-        public static void Escape(EscapingEventArgs ev)
+        public static void Escape(PlayerEscapingEvent ev)
         {
-            if (ev.EscapeScenario != Exiled.API.Enums.EscapeScenario.CustomEscape)
+            if (ev.EscapeScenario != Nebuli.API.Features.Enum.EscapeType.PluginEscape)
                 return;
 
-            if (Config.RoleConversionDictionary.TryGetValue(ev.Player.Role.Type, out RoleConversionInfo? roleConversionInfo))
+            if (Config.RoleConversionDictionary.TryGetValue(ev.Player.RoleType, out RoleConversionInfo? roleConversionInfo))
             {
                 if (roleConversionInfo.NeedToBeCuffed && !ev.Player.IsCuffed)
                     return;
 
                 ev.NewRole = roleConversionInfo.TargetRole;
-                ev.IsAllowed = true;
+                ev.IsCancelled = false;
 
                 if (Config.DisplayCustomEscapeMessage && !string.IsNullOrEmpty(roleConversionInfo.Message))
                 {
@@ -30,10 +30,10 @@
             }
         }
 
-        public static void DisplayEscapeMessage(Player player, string message, RoleTypeId newRole)
+        public static void DisplayEscapeMessage(NebuliPlayer player, string message, RoleTypeId newRole)
         {
-            string edit = message.Replace("{newRole}", $"<color={newRole.GetColor().ToHex()}>{newRole.GetFullName()}</color>");
-            player.Broadcast(new Broadcast(edit, 5), true);
+            string edit = message.Replace("{newRole}", $"<color={newRole.GetRoleColor().ToHex()}>{newRole.FullRoleName()}</color>");
+            player.Broadcast(edit, 5, clearCurrent: true);
         }
     }
 }

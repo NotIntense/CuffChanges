@@ -1,29 +1,28 @@
 ﻿namespace EscapeChanges
 {
     using EscapeChanges.Handlers;
-    using Exiled.API.Features;
+    using Nebuli.API.Features;
+    using Nebuli.Events.Handlers;
     using System;
-    using PlayerHandler = Exiled.Events.Handlers.Player;
 
     public class Plugin : Plugin<Config>
     {
         public static Plugin? Instance { get; private set; } = null;
         public override string Name { get; } = "EscapeChanges";
-        public override string Author { get; } = "NotIntense";
-        public override string Prefix { get; } = "EC";
+        public override string Creator { get; } = "NotIntense";
         public override Version Version { get; } = new(1, 0, 0);
-        public override Version RequiredExiledVersion { get; } = new(8, 2, 0);
-
+        public override Version NebuliVersion { get; } = new(1, 2, 6);
+        
         public override void OnEnabled()
         {
             Instance = this;
-            PlayerHandler.Escaping += EscapeHandler.Escape;
+            PlayerHandlers.Escaping += EscapeHandler.Escape;
             base.OnEnabled();
         }
 
         public override void OnDisabled()
         {
-            PlayerHandler.Escaping -= EscapeHandler.Escape;
+            PlayerHandlers.Escaping -= EscapeHandler.Escape;
             Instance = null;
             base.OnDisabled();
         }
