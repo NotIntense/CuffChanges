@@ -1,11 +1,11 @@
 ﻿namespace EscapeChanges
 {
     using EscapeChanges.Handlers;
-    using Nebuli.API.Interfaces;
+    using Exiled.API.Interfaces;
     using PlayerRoles;
     using System.ComponentModel;
 
-    public sealed class Config : IConfiguration
+    public sealed class Config : IConfig
     {
         [Description("Gets or sets if the plugin is enabled.")]
         public bool IsEnabled { get; set; } = true;
